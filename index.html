@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#f7f0ff" />
+  <meta name="description" content="超不準 AI 算命事務所：有問題？宇宙已讀但亂回。填好基本資料，體驗水晶球、荒謬塔羅、精神狀態檢測與戀愛腦診斷。" />
+  <title>超不準 AI 算命事務所｜宇宙已讀但亂回</title>
+  <link rel="stylesheet" href="./assets/styles.css" />
+  <script src="./content/fortunes.js" defer></script>
+  <script src="./assets/app.js" defer></script>
+</head>
+<body>
+  <a href="#main" class="skip-link">跳到主要內容</a>
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
+  <div class="noise" aria-hidden="true"></div>
+
+  <!-- 第一關：使用者必須先填寫基本資料才能開始 -->
+  <div id="onboarding-screen" class="page-shell">
+    <header class="topbar">
+      <a class="wordmark" href="./index.html" aria-label="超不準 AI 算命事務所首頁">
+        <span class="logo-mark" aria-hidden="true">✳</span>
+        <span>DELULU <small>FORTUNE OFFICE</small></span>
+      </a>
+      <span class="status-pill"><span class="status-dot"></span>宇宙客服在線亂講</span>
+    </header>
+
+    <main id="main" class="onboarding-layout">
+      <section class="intro" aria-labelledby="intro-title">
+        <span class="eyebrow">✦ 歡迎來到全宇宙最不可靠的服務中心 ✦</span>
+        <h1 id="intro-title">超不準<br /><span class="gradient-text">AI 算命</span><br />事務所<span class="title-spark">✳</span></h1>
+        <p class="intro-lead">有問題？<strong>宇宙已讀但亂回。</strong><br />人生太難，不如先來聽宇宙胡說八道。</p>
+        <div class="service-chips" aria-label="事務所服務">
+          <span>🔮 水晶球亂算</span>
+          <span>🃏 荒謬塔羅</span>
+          <span>🪫 精神狀態檢測</span>
+          <span>💘 戀愛腦診斷</span>
+        </div>
+        <div class="mascot-scene" aria-hidden="true">
+          <span class="scene-star star-a">✦</span>
+          <span class="scene-star star-b">✴</span>
+          <span class="scene-star star-c">✧</span>
+          <div class="planet-ring"></div>
+          <div class="mascot">
+            <div class="mascot-face"><span class="mascot-eye"></span><span class="mascot-eye"></span><span class="mascot-mouth"></span></div>
+            <span class="mascot-blush blush-left"></span><span class="mascot-blush blush-right"></span>
+          </div>
+          <div class="mascot-shadow"></div>
+          <span class="speech-tag">「我亂講，你參考就好」</span>
+          <span class="ticket ticket-a">LUCK <b>???</b></span>
+          <span class="ticket ticket-b">✷ 99% DELULU</span>
+        </div>
+      </section>
+
+      <section class="intake-panel" aria-labelledby="intake-title">
+        <div class="intake-decoration" aria-hidden="true">✦ ✴ ✦</div>
+        <div class="form-heading"><span class="step-chip">STEP 01 / 01</span><span class="tiny-stamp">CONFIDENTIAL-ish</span></div>
+        <h2 id="intake-title">先讓宇宙<br />認識一下你 👀</h2>
+        <p class="muted">填完這張超不正式的基本資料表，就能解鎖事務所的所有房間。</p>
+
+        <form id="intake-form" novalidate>
+          <div class="field">
+            <label for="nickname">怎麼稱呼你？ <span class="required">必填</span></label>
+            <input id="nickname" name="nickname" type="text" maxlength="16" autocomplete="off" placeholder="例如：快被報告逼瘋的小美" required aria-describedby="nickname-hint" />
+            <small id="nickname-hint">只要暱稱就好，不用提供真實姓名。</small>
+          </div>
+
+          <div class="field">
+            <label for="zodiac">你的星座 <span class="optional">選填</span></label>
+            <select id="zodiac" name="zodiac"><option value="">保密，宇宙不需要知道</option>
+              <option>牡羊座</option><option>金牛座</option><option>雙子座</option><option>巨蟹座</option>
+              <option>獅子座</option><option>處女座</option><option>天秤座</option><option>天蠍座</option>
+              <option>射手座</option><option>摩羯座</option><option>水瓶座</option><option>雙魚座</option>
+            </select>
+          </div>
+
+          <fieldset class="field mood-fieldset">
+            <legend>今天的精神狀態？ <span class="required">必填</span></legend>
+            <div class="mood-options">
+              <label class="mood-option"><input type="radio" name="mood" value="還行" checked /><span>😎<small>還行</small></span></label>
+              <label class="mood-option"><input type="radio" name="mood" value="想睡" /><span>🥱<small>想睡</small></span></label>
+              <label class="mood-option"><input type="radio" name="mood" value="崩潰" /><span>🫠<small>崩潰</small></span></label>
+              <label class="mood-option"><input type="radio" name="mood" value="暈船" /><span>🥰<small>暈船</small></span></label>
+            </div>
+          </fieldset>
+
+          <div class="field">
+            <label for="interest">你現在最在意什麼？</label>
+            <select id="interest" name="interest">
+              <option value="課業">📚 課業生存</option>
+              <option value="戀愛">💗 戀愛桃花</option>
+              <option value="財運">💸 錢包安危</option>
+              <option value="人生">🪐 人生方向</option>
+            </select>
+          </div>
+
+          <p class="form-error" id="form-error" role="alert" hidden></p>
+          <button class="btn btn-primary enter-btn" type="submit">領取你的宇宙通行證 <span aria-hidden="true">↗</span></button>
+          <p class="privacy-note">🔒 不用註冊、不會上傳資料；資料只在本次頁面使用，重新整理就會清除。</p>
+        </form>
+      </section>
+    </main>
+    <footer class="entry-footer"><span>© 2026 DELULU FORTUNE OFFICE</span><span>本網站僅供娛樂，不提供真實占卜或專業建議。</span></footer>
+  </div>
+
+  <!-- 完成基本資料後才會顯示，無 JavaScript 時不會洩露任何資訊 -->
+  <div id="app-screen" class="app-shell" hidden>
+    <header class="topbar app-topbar">
+      <a class="wordmark" href="./index.html" aria-label="超不準 AI 算命事務所首頁"><span class="logo-mark" aria-hidden="true">✳</span><span>DELULU <small>FORTUNE OFFICE</small></span></a>
+      <div class="account-info"><span class="visitor-badge">✦ <span id="header-nickname"></span> 的宇宙通行證</span><button type="button" id="reset-profile" class="text-button">換個身分 ↗</button></div>
+    </header>
+
+    <main class="app-main" id="app-main">
+      <section class="welcome-hero" aria-labelledby="welcome-title">
+        <div class="welcome-copy">
+          <span class="eyebrow dark-eyebrow">☆ 宇宙分部 · 24 小時胡說八道 ☆</span>
+          <h1 id="welcome-title">歡迎光臨，<br /><span id="welcome-nickname" class="gradient-text"></span>！</h1>
+          <p id="welcome-subtitle">你的人生疑難雜症，交給沒有執照的宇宙客服。</p>
+          <div class="profile-tags"><span id="profile-zodiac">✷ 保密星座</span><span id="profile-mood">☻ 心情還行</span></div>
+        </div>
+        <div class="hero-art" aria-hidden="true"><span class="hero-spark spark-one">✳</span><span class="hero-spark spark-two">✦</span><div class="hero-orb"><span>👁️</span><small>宇宙正在亂看</small></div><span class="hero-label">YOUR DESTINY IS BUFFERING...</span></div>
+      </section>
+
+      <section class="rooms-section" aria-labelledby="rooms-title">
+        <div class="section-title-row"><div><span class="eyebrow dark-eyebrow">SELECT YOUR CHAOS</span><h2 id="rooms-title">今天想被哪種方式亂算？</h2></div><span id="room-progress" class="progress-label">已體驗 0 / 4 間</span></div>
+        <nav class="room-nav" aria-label="占卜房間">
+          <button type="button" class="room-tab active" data-room="oracle" aria-current="page"><span class="room-icon lilac">🔮</span><span><strong>水晶球亂算</strong><small>宇宙不負責預言</small></span><span class="room-check" data-done="oracle" aria-hidden="true"></span></button>
+          <button type="button" class="room-tab" data-room="tarot"><span class="room-icon peach">🃏</span><span><strong>荒謬塔羅</strong><small>抽到什麼都是命</small></span><span class="room-check" data-done="tarot" aria-hidden="true"></span></button>
+          <button type="button" class="room-tab" data-room="energy"><span class="room-icon mint">🪫</span><span><strong>精神狀態檢測</strong><small>你的靈魂還在線嗎</small></span><span class="room-check" data-done="energy" aria-hidden="true"></span></button>
+          <button type="button" class="room-tab" data-room="love"><span class="room-icon pink">💘</span><span><strong>戀愛腦診斷</strong><small>理智可能已離線</small></span><span class="room-check" data-done="love" aria-hidden="true"></span></button>
+        </nav>
+      </section>
+
+      <section id="room-oracle" class="experience-panel" aria-labelledby="oracle-title">
+        <div class="room-header"><span class="room-number">ROOM NO. 001</span><span class="room-time">✦ 胡說時間：10 秒內</span></div>
+        <div class="room-two-col">
+          <div>
+            <span class="large-emoji" aria-hidden="true">🔮</span><h2 id="oracle-title">水晶球亂算</h2>
+            <p class="room-description">把問題交給水晶球，讓它用最有自信的語氣，說出最不負責任的答案。</p>
+            <form id="oracle-form">
+              <div class="field"><label for="oracle-category">選擇算命分類</label><select id="oracle-category" name="category"><option value="課業">📚 課業</option><option value="戀愛">💗 戀愛</option><option value="財運">💸 財運</option><option value="人生">🪐 人生</option></select></div>
+              <div class="field"><label for="oracle-question">你想問宇宙什麼？ <span class="optional">選填</span></label><input id="oracle-question" maxlength="90" type="text" autocomplete="off" placeholder="例如：我明天會準時起床嗎？" /></div>
+              <button type="submit" class="btn btn-primary">請宇宙開始亂講 ✨</button>
+            </form>
+          </div>
+          <div class="result-stage oracle-stage" aria-live="polite">
+            <div class="stage-prompt" id="oracle-idle"><div class="stage-crystal" aria-hidden="true">✧<span>🔮</span></div><strong>水晶球正在摸魚</strong><p>填好問題後按下按鈕，宇宙就會開始胡扯。</p></div>
+            <div id="oracle-result" class="fortune-result" hidden><span class="result-kicker">✦ OFFICIAL UNOFFICIAL PROPHECY ✦</span><h3 id="oracle-result-headline"></h3><p id="oracle-result-text"></p><div class="result-stats"><span id="oracle-lucky"></span><span id="oracle-chaos"></span></div><button id="copy-fortune" class="btn btn-outline" type="button">複製這則荒謬預言 ⧉</button><p id="copy-status" class="small-feedback" aria-live="polite"></p></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="room-tarot" class="experience-panel" aria-labelledby="tarot-title" hidden>
+        <div class="room-header"><span class="room-number">ROOM NO. 002</span><span class="room-time">✦ 今日的牌，昨天就洗好了</span></div>
+        <div class="section-heading-center"><span class="large-emoji" aria-hidden="true">🃏</span><h2 id="tarot-title">荒謬塔羅</h2><p class="room-description">閉上眼，深呼吸，憑直覺選一張。其實選哪張都很荒謬。</p></div>
+        <div class="tarot-deck" id="tarot-deck" aria-label="選擇塔羅牌">
+          <button type="button" class="tarot-card" data-tarot="0" aria-label="翻開左邊的塔羅牌"><span class="card-inner"><span class="card-emblem">✹</span><span class="card-question">?</span><small>DELULU TAROT</small></span></button>
+          <button type="button" class="tarot-card" data-tarot="1" aria-label="翻開中間的塔羅牌"><span class="card-inner"><span class="card-emblem">✹</span><span class="card-question">?</span><small>DELULU TAROT</small></span></button>
+          <button type="button" class="tarot-card" data-tarot="2" aria-label="翻開右邊的塔羅牌"><span class="card-inner"><span class="card-emblem">✹</span><span class="card-question">?</span><small>DELULU TAROT</small></span></button>
+        </div>
+        <div id="tarot-result" class="tarot-result" aria-live="polite" hidden><span class="result-kicker">YOUR VERY QUESTIONABLE CARD</span><h3 id="tarot-card-name"></h3><p id="tarot-card-message"></p><p id="tarot-card-action" class="tip-line"></p><button type="button" id="tarot-retry" class="btn btn-outline">重洗一次命運 ↻</button></div>
+      </section>
+
+      <section id="room-energy" class="experience-panel" aria-labelledby="energy-title" hidden>
+        <div class="room-header"><span class="room-number">ROOM NO. 003</span><span class="room-time">✦ 不具任何醫療診斷功能</span></div>
+        <div class="section-heading-center"><span class="large-emoji" aria-hidden="true">🫠</span><h2 id="energy-title">精神狀態檢測</h2><p class="room-description">三題判定你的今日靈魂網路訊號，完全不科學，但非常會形容。</p></div>
+        <form id="energy-form" class="quiz-form" novalidate></form>
+        <div id="energy-result" class="quiz-result" aria-live="polite" hidden><span class="result-kicker">YOUR CURRENT VIBE</span><div id="energy-score" class="score-emoji"></div><h3 id="energy-level"></h3><p id="energy-message"></p><button type="button" id="energy-retry" class="btn btn-outline">再測一次 ↻</button></div>
+      </section>
+
+      <section id="room-love" class="experience-panel" aria-labelledby="love-title" hidden>
+        <div class="room-header"><span class="room-number">ROOM NO. 004</span><span class="room-time">✦ 拒絕替你傳訊息給前任</span></div>
+        <div class="section-heading-center"><span class="large-emoji" aria-hidden="true">💘</span><h2 id="love-title">戀愛腦診斷</h2><p class="room-description">你是人間清醒，還是對方回個「哈哈」你就開始想婚禮？</p></div>
+        <form id="love-form" class="quiz-form" novalidate></form>
+        <div id="love-result" class="quiz-result love-result" aria-live="polite" hidden><span class="result-kicker">LOVE BRAIN STATUS</span><div id="love-score" class="score-emoji"></div><h3 id="love-level"></h3><p id="love-message"></p><button type="button" id="love-retry" class="btn btn-outline">不信邪，再測一次 ↻</button></div>
+      </section>
+
+      <div class="app-bottom-note"><span>✴</span><p>宇宙客服溫馨提醒：以上內容皆為<strong>原創娛樂文案＋隨機／規則式產生</strong>，不是真正 AI 即時算命。請別拿它決定考試、投資或人生大事。</p></div>
+    </main>
+    <footer class="app-footer"><span>© 2026 DELULU FORTUNE OFFICE</span><span>MADE WITH CHAOS, NOT COSMIC SCIENCE ✷</span></footer>
+  </div>
+</body>
+</html>
